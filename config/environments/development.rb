@@ -88,4 +88,7 @@ Rails.application.configure do
   # Docker supports a bunch of ranges so let's just support everything. This
   # isn't insecure due to only running in development.
   config.web_console.allowed_ips = ["0.0.0.0/0"]
+  config.hosts << "scaling-waffle-54jrgrgw77q3pxpg-8000.app.github.dev"
+  config.action_controller.forgery_protection_origin_check = false
+  config.hosts.clear
 end

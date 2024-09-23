@@ -9,7 +9,7 @@ class Customer::CartItemsController < ApplicationController
 
   def create
     increase_or_create(params[:cart_item][:product_id])
-    redirect_to cart_items_path, notice: 'Successfully added product to your cart'
+    redirect_to cart_items_path, notice: '商品がカートに追加されました。'
   end
 
   def increase
